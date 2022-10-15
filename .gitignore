@@ -1,0 +1,5 @@
+*.old
+.DS_Store
+Gemfile.lock
+_old
+Brewfile*.json

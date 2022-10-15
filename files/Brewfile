@@ -1,0 +1,142 @@
+cask_args appdir: '/Applications'
+
+# UNIX Defaults
+brew "binutils"                             # GNU Binutils
+brew "coreutils"                            # GNU Core Utilities 
+brew "diffutils"                            # GNU Diff Utilities
+brew "findutils"                            # GNU Find Utilities
+brew "gawk"                            		  # Data formatting and extraction
+brew "gnu-sed"                              # Stream Editor
+brew "gnu-tar"                              # tool for creating tar archives
+brew "gnu-which"                            # utility for finding which executable is used when running a command
+brew "grep"                            			# Searching text
+brew "gzip"                            			# tool for file compression and decompression 
+brew "less"                            			# Tool for displaying file contents
+brew "lsof"                            			# list open files
+brew "make"                                 # Build tool
+brew "rsync"                                # utility for transferring and synchronizing files between computers
+brew "stow"                                 # Symlink creator, useful for dotfiles
+brew "tree"                                 # Recursive display
+brew "wget"																	# command-line utility for downloading files from the web
+brew "libtool"                              # Generic library support script
+brew "jq"																		# JSON parser
+brew "yq"																		# YAML parser
+
+
+### GIT
+brew "git"
+brew "gh" 																	# GitHub command-line tool
+
+
+### EDITORS
+# Widely used CLI editors
+brew "vim"																	# CLI Text Editor
+brew "neovim"                               # CLI Text Editor
+cask "vimr"                                 # NEovim GUI for mac
+cask "visual-studio-code"                   # Code editor
+cask "dbeaver-community"										# Database GUI
+
+
+### CLI Utils
+
+brew "netcat"																# utility for working with TCP and UDP
+brew "bitwarden-cli"                        # Bitwarden CLI utility
+brew "dockutil"                             # Manages the dock icons
+brew "fzf"                                  # Fuzzy finder
+brew "graphviz"                             # Graph visualization software
+brew "htop"                                 # Display system usage
+brew "imagemagick"  												# Good image editing software
+brew "jdupes"                               # Better fdupes
+brew "lnav"                                 # Log viewer
+brew "mas"                                  # Install software from app store
+brew "ncdu"                                 # Storage analyzer
+brew "ranger"                               # Console file manager with VI key bindings
+cask "ngrok" 																# Reverse proxy, secure introspectable tunnels to localhost
+brew "tmux"																  # Terminal multiplexer and server
+brew "trash"                                # To use OS trash instead of rm forever
+brew "unison"                               # Sync both ways folders
+brew "wdiff"                                # Word by word diff
+brew "pandoc" 															# Swiss-army knife of markup format conversion
+brew "tmux" 																# Terminal multiplexer
+
+### PROGRAMMING LANGUAGES
+brew "nvm" 																	# Manage multiple Node.js versions
+brew "stack" 																# Haskell
+
+### Window management / Productivity
+tap 'koekeishiya/formulae'								  # Yabai and skhd source
+brew 'koekeishiya/formulae/yabai'           # Tiling window manager
+cask "alfred" 															# Application launcher and productivity software
+cask "hammerspoon" 													# Desktop automation application
+cask "maccy"                                # Clipboard manager
+cask "karabiner-elements"										# Keyboard customizer
+cask "dozer"		 														# Tool to customize the Mac OS X menu bar
+
+### DESKTOP Applications
+cask "firefox"															# Web browser
+cask "flux" 																# Screen color temperature controller
+cask "anki"																  # Memory training application
+cask "bitwarden" 														# Desktop password and login vault
+cask "brooklyn" 														# Screen saver based on animations presented during Apple Special Event Brooklyn                    # Keep the screen from sleeping
+cask "calibre"														  # E-books management software
+cask "gimp" 																# Free and open-source image editor
+cask "google-chrome" 												# Web browser
+cask "iterm2"															  # Terminal emulator as alternative to Apple's Terminal app
+cask "postman"														  # Collaboration platform for API development
+cask "kindle" 															# Interface for reading and syncing eBooks
+cask "jetbrains-toolbox"									  # JetBrains tools manager
+cask "alacritty"                            # Good terminal emulator
+cask "appcleaner"                           # Removes plist along with the app
+cask "authy"																# 2FA App
+cask "logitech-options"                     # Drivers for keyboard and mouse
+cask "logitech-unifying"                    # Drivers for keyboard and mouse
+cask "paintbrush"                           # MS paint equivalent
+cask "selfcontrol"                          # Blacklisting websites and getting work done
+cask "spotify"                              # Music streaming
+cask "the-unarchiver"                       # To deflate and decompress files
+cask "vlc"                                  # Video Player
+cask "Slack"                                # Communication tool
+cask "wireshark"														# Network protocol analyzer
+cask "transmit"															# Proprietary FTP client
+cask "notion"																# Note taking app
+cask "obsidian"															# Note taking app
+cask "figma"
+
+# Quick look plugins
+
+cask "glance"  															# Wide array of code, json, md, tsv,...
+cask "qladdict" 														# SRT files
+cask "qlimagesize"  												# Images
+cask "qlmobi"  															# Mobi ebooks
+cask "qlprettypatch"  											# .patch files
+cask "qlstephen"  													# catch-all for text files like CHANGELOG, README, INSTALL
+cask "qlvideo"    													# Preview video thumbnails
+cask "quicklook-csv"  											# CSV
+cask "quicknfo"   													# .nfo files
+cask "suspicious-package" 									# For .pkgs
+
+# Fonts
+tap 'homebrew/cask-fonts'
+cask "font-fira-mono"
+cask "font-fira-sans"
+cask "font-victor-mono"
+cask "font-fira-code"
+cask "font-computer-modern"
+cask "font-jetbrains-mono"
+cask "font-cascadia-code"
+cask "font-cascadia-code-pl"
+cask "font-cascadia-mono"
+cask "font-cascadia-mono-pl"
+
+# Docker
+brew "docker"
+brew "docker-compose"
+
+
+### Mac App Store Installs
+mas "Disk Speed Test", id: 425264550        # To test the speed of SSD
+mas "WireGuard", id: 1451685025             # Wireguard macOS client
+mas "Xcode", id: 497799835                  # Apple's developper tools
+mas "DigiDoc4 Clients", id: 1370791134      # Signing documents
+mas "TeRa", id: 1243347809                  # Signing documents
+

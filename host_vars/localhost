@@ -1,0 +1,20 @@
+hostname: "tank"
+
+homebrew_services:
+  - yabai
+
+pyenv_python_versions:
+# In precedence order
+- 3.9.0
+- 2.7.18
+
+pip_packages: []
+
+dock_apps:
+- /Applications/Google Chrome
+- /Applications/Spotify
+- /Applications/Anki
+- /Applications/Authy Desktop
+
+dock_folders:
+- ~/Downloads

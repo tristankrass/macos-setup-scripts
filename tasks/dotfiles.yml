@@ -1,0 +1,14 @@
+- name:
+  set_fact:
+    dotfiles_path: "{{ ansible_env.HOME }}/.dotfiles"
+
+- name: Check for dotfiles
+  stat:
+    path: "{{ dotfiles_path }}"
+  register: dotfiles
+
+- name: Clone dotfiles
+  git:
+    repo: https://github.com/tristankrass/.dotfiles
+    dest: "{{ dotfiles_path }}"
+  when: not dotfiles.stat.exists
