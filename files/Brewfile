@@ -39,18 +39,12 @@ brew "awscurl"
 brew "bat"
 # GNU binary tools for native development
 brew "binutils"
-# Platform built on V8 to build network applications
-brew "node"
-# Secure and free password manager for all of your devices
-brew "bitwarden-cli"
 # Get/set bluetooth power and discoverable state
 brew "blueutil"
 # Core application library for C
 brew "glib"
 # OpenAI's coding agent that runs in your terminal
 brew "codex"
-# Linux virtual machines
-brew "lima"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", args: ["HEAD"]
 # GNU multiple precision arithmetic library
@@ -165,12 +159,8 @@ brew "pipx"
 brew "pwgen"
 # Python version management
 brew "pyenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
-# Generic machine emulator and virtualizer
-brew "qemu"
+# Modern Python package installer and resolver
+brew "uv"
 # File browser
 brew "ranger"
 # Utility that provides fast incremental file transfer
@@ -215,8 +205,6 @@ brew "telepresenceio/telepresence/telepresence-oss"
 brew "twilio-internal/tap/bundlectl"
 # A kubectl plugin for working with OTK clusters
 brew "twilio-internal/tap/kubectl-otk"
-# Privacy-focused app for managing your finances
-cask "actual"
 # GPU-accelerated terminal emulator
 cask "alacritty", args: { appdir: "/Applications" }
 # Application launcher and productivity software
@@ -315,6 +303,7 @@ cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
 cask "font-victor-mono", args: { appdir: "/Applications" }
 cask "font-victor-mono-nerd-font"
+cask "font-monaspace"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Free and open-source image editor
@@ -335,16 +324,12 @@ cask "kindle", args: { appdir: "/Applications" }
 cask "lm-studio"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
+# Cross-platform text expander
+cask "espanso"
 # Clipboard manager
 cask "maccy", args: { appdir: "/Applications" }
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok", args: { appdir: "/Applications" }
-# Desktop application
-cask "nofwl"
-# App to write, plan, collaborate, and get organised
-cask "notion", args: { appdir: "/Applications" }
-# Calendar for professionals and teams
-cask "notion-calendar"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian", args: { appdir: "/Applications" }
 # Image editor
@@ -397,18 +382,13 @@ cask "visual-studio-code"
 cask "visual-studio-code@insiders"
 # Multimedia player
 cask "vlc", args: { appdir: "/Applications" }
-# Rust-based terminal
-cask "warp"
 # Network protocol analyzer
 cask "wireshark-app"
 # Gecko based web browser
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Aiko", id: 1672085276
-mas "Amazing AI", id: 1660147028
 mas "Amphetamine", id: 937984704
-mas "Blackmagic Disk Speed Test", id: 425264550
 mas "DigiDoc4", id: 1370791134
 mas "Okta Verify", id: 490179405
 mas "Perplexity", id: 6714467650
