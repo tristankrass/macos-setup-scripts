@@ -55,6 +55,8 @@ brew "coreutils"
 brew "diffutils"
 # Tool for exploring each layer in a docker image
 brew "dive"
+# Tool for managing the macOS Dock
+brew "dockutil"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Isolated development environments using Docker

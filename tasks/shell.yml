@@ -1,25 +1,6 @@
 - set_fact:
     prezto_repo_url: https://github.com/sorin-ionescu/prezto.git
 
-# ZSH
-
-- name: Get zsh path
-  command: command -v zsh
-  register: zsh_path
-
-- name: Add hombrew zsh to /etc/shells
-  lineinfile:
-    path: "/etc/shells"
-    line: "{{ zsh_path.stdout }}"
-  become: yes
-
-- name: Switch to zsh
-  user:
-    name: "{{ansible_ssh_user}}"
-    shell: "{{ zsh_path.stdout }}"
-  become: yes
-
-
 # PREZTO
 - name: Install prezto from git.
   git:
@@ -96,13 +77,12 @@
     line: "source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
 
-- name: Install CLI utils
+- name: Install additional CLI utils
   homebrew:
     name: "{{ item }}"
     state: present
   loop:
     - fasd
-    - fzf
     - broot
 
 - name: Ensure home/bin is sourced

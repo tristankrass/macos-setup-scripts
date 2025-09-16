@@ -11,11 +11,20 @@
 
   tasks:
 
+    - name: Install Software
+      include_tasks: tasks/software.yml
+
+    - name: Setup Shell Environment
+      include_tasks: tasks/shell.yml
+
+    - name: Setup Dotfiles
+      include_tasks: tasks/dotfiles.yml
+
+    - name: Apply macOS System Settings
+      script: scripts/macos-settings.sh
+
     - name: Setup Dock
       include_tasks: tasks/dock.yml
-
-    - name: Apply additional macOS settings
-      script: new_stuff.sh
 
   handlers:
     - name: kill dock
