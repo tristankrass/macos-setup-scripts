@@ -30,8 +30,6 @@ defaults write -globalDomain NSTableViewDefaultSizeMode -int 2
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-# System Preferences > Dock > Size:
-defaults write com.apple.dock tilesize -int 65
 
 # System Preferences > Dock > Magnification:
 defaults write com.apple.dock magnification -bool false
@@ -51,8 +49,6 @@ defaults write com.apple.dock autohide -bool true
 # System Preferences > Dock > Automatically hide and show the Dock (duration)
 defaults write com.apple.dock autohide-time-modifier -float 0
 
-# System Preferences > Dock > Automatically hide and show the Dock (delay)
-defaults write com.apple.dock autohide-delay -float 0
 
 # System Preferences > Dock > Show indicators for open applications
 defaults write com.apple.dock show-process-indicators -bool true
@@ -109,8 +105,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 # General UI/UX                                                               #
 ###############################################################################
 
-# Set the dark style
-defaults write NSGlobalDomain AppleInterfaceStyle -string 'Dark'
 
 # Menu bar: show remaining battery  percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
@@ -265,35 +259,30 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 # Energy saving                                                               #
 ###############################################################################
 
-# # Enable lid wakeup
-# # sudo pmset -a lidwake 1
-# 
-# # Restart automatically on power loss
-# sudo pmset -a autorestart 1
-# 
-# # Restart automatically if the computer freezes
-# sudo systemsetup -setrestartfreeze on
-# 
-# # Sleep the display after 15 minutes
-# sudo pmset -a displaysleep 15
-# 
-# # Disable machine sleep while charging
-# sudo pmset -c sleep 0
-# 
-# # Set machine sleep to 5 minutes on battery
-# sudo pmset -b sleep 5
-# 
-# # Set standby delay to 24 hours (default is 1 hour)
-# sudo pmset -a standbydelay 86400
-# 
-# # Never go into computer sleep mode
-# # sudo systemsetup -setcomputersleep Off > /dev/null
-# 
-# # Hibernation mode
-# # 0: Disable hibernation (speeds up entering sleep mode)
-# # 3: Copy RAM to disk so the system state can still be restored in case of a
-# #    power failure.
-# sudo pmset -a hibernatemode 0
+# Enable lid wakeup
+sudo pmset -a lidwake 1
+
+# Restart automatically on power loss
+sudo pmset -a autorestart 1
+
+# Restart automatically if the computer freezes
+sudo systemsetup -setrestartfreeze on
+
+# Sleep the display after 15 minutes
+sudo pmset -a displaysleep 15
+
+# Disable machine sleep while charging
+sudo pmset -c sleep 0
+
+# Set machine sleep to 5 minutes on battery
+sudo pmset -b sleep 5
+# Set standby delay to 24 hours (default is 1 hour)
+sudo pmset -a standbydelay 86400
+
+# Hibernation mode
+# 0: Disable hibernation (speeds up entering sleep mode)
+# 3: Copy RAM to disk so the system state can still be restored in case of a power failure
+sudo pmset -a hibernatemode 0
 # 
 # # Remove the sleep image file to save disk space
 # sudo rm /private/var/vm/sleepimage
@@ -677,29 +666,7 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 #   MENU_SPOTLIGHT_SUGGESTIONS (send search queries to Apple)
 #   MENU_WEBSEARCH             (send search queries to Apple)
 #   MENU_OTHER
-defaults write com.apple.spotlight orderedItems -array \
-    '{"enabled" = 1;"name" = "APPLICATIONS";}' \
-    '{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-    '{"enabled" = 1;"name" = "DIRECTORIES";}' \
-    '{"enabled" = 1;"name" = "PDF";}' \
-    '{"enabled" = 1;"name" = "FONTS";}' \
-    '{"enabled" = 0;"name" = "DOCUMENTS";}' \
-    '{"enabled" = 0;"name" = "MESSAGES";}' \
-    '{"enabled" = 0;"name" = "CONTACT";}' \
-    '{"enabled" = 0;"name" = "EVENT_TODO";}' \
-    '{"enabled" = 0;"name" = "IMAGES";}' \
-    '{"enabled" = 0;"name" = "BOOKMARKS";}' \
-    '{"enabled" = 0;"name" = "MUSIC";}' \
-    '{"enabled" = 0;"name" = "MOVIES";}' \
-    '{"enabled" = 0;"name" = "PRESENTATIONS";}' \
-    '{"enabled" = 0;"name" = "SPREADSHEETS";}' \
-    '{"enabled" = 0;"name" = "SOURCE";}' \
-    '{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
-    '{"enabled" = 0;"name" = "MENU_OTHER";}' \
-    '{"enabled" = 0;"name" = "MENU_CONVERSION";}' \
-    '{"enabled" = 0;"name" = "MENU_EXPRESSION";}' \
-    '{"enabled" = 0;"name" = "MENU_WEBSEARCH";}' \
-    '{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}'
+
 # Load new settings before rebuilding the index
 killall mds > /dev/null 2>&1
 # Make sure indexing is enabled for the main volume
@@ -787,15 +754,4 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
-for app in "Activity Monitor" \
-    "cfprefsd" \
-    "Dock" \
-    "Finder" \
-    "Mail" \
-    "Photos" \
-    "Safari" \
-    "SystemUIServer" \
-    "Terminal"; do
-    killall "${app}" &> /dev/null
-done
 echo "Done. Note that some of these changes require a logout/restart to take effect."

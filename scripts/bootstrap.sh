@@ -37,8 +37,6 @@ sudo spctl --master-disable
 
 # Install ansible
 brew install ansible
-# Install expect to get unbuffer
-brew install unbuffer
 
 # Install SDK Man - For managing all things running on top of JVM
 curl -s "https://get.sdkman.io" | bash
